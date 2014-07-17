@@ -10,5 +10,9 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
     </style>
-    
+    <!-- popupwindow in and out  anim -->
+    <style name="showPopupWindows" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/show_popipwindw_in</item>
+        <item name="@android:windowExitAnimation">@anim/show_popupwindow_out</item>
+    </style>
 </resources>

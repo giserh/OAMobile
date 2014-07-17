@@ -6,6 +6,8 @@ import java.lang.reflect.Method;
 import com.engc.oamobile.R;
 import com.engc.oamobile.support.lib.PagerSlidingTabStrip;
 
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +18,7 @@ import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.ViewConfiguration;
 import android.view.Window;
 
@@ -31,6 +34,7 @@ public class OnlineAudit extends FragmentActivity {
 	private PagerSlidingTabStrip tabs;
 	private DisplayMetrics dm;
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -42,6 +46,22 @@ public class OnlineAudit extends FragmentActivity {
 		pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 		tabs.setViewPager(pager);
 		setTabsValue();
+		ActionBar ab = getActionBar();
+		ab.setDisplayHomeAsUpEnabled(true);
+		ab.setTitle("在线审批");
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem menu) {
+		switch (menu.getItemId()) {
+		case android.R.id.home:
+			finish();
+			break;
+
+		default:
+			break;
+		}
+		return super.onContextItemSelected(menu);
 	}
 
 	/**

@@ -332,5 +332,7 @@
     <color name="index_nine_modem_cutline_bg">#c4b8b8</color>
     <!-- 九宫格背景色 -->
     <color name="index_nine_modem_bg">#f6eadc</color>
+    <!--  点击九宫格单个背景色 -->
+    <color name="index_nine_modem_press_bg">#eee3d5</color>
 
 </resources>

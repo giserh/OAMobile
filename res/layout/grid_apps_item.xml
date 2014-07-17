@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@color/index_nine_modem_bg"
+     
     android:paddingTop="12.0dp" >
 
     <ImageView
@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_contact"
+        
          >
     </ImageView>
 
@@ -24,7 +26,8 @@
         android:text="TextView"
         android:textColor="@color/black"
         android:textStyle="bold" 
-        android:visibility="gone">
+        android:visibility="gone"
+        >
     </TextView>
 
 </RelativeLayout>

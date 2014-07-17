@@ -23,12 +23,12 @@
             android:text="移动OA" />
 
         <ImageView
-            android:id="@+id/send_tweet_info"
+            android:id="@+id/img_titlebar_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center"
             android:clickable="true"
-            android:src="@drawable/icon_actionbar_more" />
+            android:background="@drawable/index_titlebar_more_selector" />
     </FrameLayout>
 
 </LinearLayout>

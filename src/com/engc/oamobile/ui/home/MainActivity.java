@@ -12,15 +12,20 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.engc.oamobile.R;
+import com.engc.oamobile.support.utils.BitmapManager;
+import com.engc.oamobile.support.utils.GlobalContext;
+import com.engc.oamobile.support.widgets.ShowMorePopupWindow;
 import com.engc.oamobile.ui.audit.OnlineAudit;
 
 @SuppressLint("NewApi")
@@ -29,6 +34,7 @@ public class MainActivity extends Activity {
 	public List<String> imgtitleList; // 存放应用标题list
 	public List<Integer> imgList; // 存放应用图片list
 	public View[] itemViews;
+	private ShowMorePopupWindow smPw;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,17 @@ public class MainActivity extends Activity {
 
 	private void initView() {
 		gvModem = (GridView) findViewById(R.id.gvmodem);
+		ImageView imgMore = (ImageView) findViewById(R.id.img_titlebar_more);
+		imgMore.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				showPopupWindow();
+				showPopupView();
+
+			}
+		});
 
 		gvModem.setOnItemClickListener(new OnItemClickListener() {
 
@@ -66,6 +83,35 @@ public class MainActivity extends Activity {
 
 			}
 		});
+
+	}
+	
+	public void showPopupWindow() {
+		smPw = new ShowMorePopupWindow(MainActivity.this, itemsOnClick);
+		// 显示窗口
+		View view = MainActivity.this.findViewById(R.id.img_titlebar_more);
+		// 计算坐标的偏移量
+		int xoffInPixels = smPw.getWidth() - view.getWidth() + 10;
+		smPw.showAsDropDown(view, -xoffInPixels, 0);
+
+	}
+
+	// 为弹出窗口实现监听类
+	private OnClickListener itemsOnClick = new OnClickListener() {
+
+		public void onClick(View v) {
+			smPw.dismiss();
+		}
+	};
+
+	// 设置popupView
+	private void showPopupView() {
+		View view = ShowMorePopupWindow.initView();
+	/*	ImageView userFace = (ImageView) view.findViewById(R.id.userface);
+		TextView userName = (TextView) view.findViewById(R.id.username);*/
+		// userName.setText(GlobalContext.getInstance().getSpUtil().getUserInfo().getUsername());
+		// String url
+		// =GlobalContext.getInstance().getSpUtil().getUserInfo().getPhoto();
 
 	}
 
