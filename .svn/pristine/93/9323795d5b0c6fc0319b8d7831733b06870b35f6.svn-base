@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">移动OA</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pulldown_scrollview">PulldownScrollView</string>
+    <string name="stretch_scrollview">StretchScrollView</string>
+    <string name="add_attention">加关注</string>
+    <string name="user_post">职位：产品经理</string>
+    <string name="user_book">书单：25本</string>
+    <string name="user_name">西北老狼michael</string>
+    <string name="user_des">谁能像优乐美一样把我捧在手心，我就能让他的儿子长的更帅女儿长的更漂亮</string>
+    <string name="user_recommend_tip">TA推荐的好书</string>
+    <string name="card_number">卡编号:</string>
+    <string name="name">姓名:</string>
+    <string name="balance">当前余额:</string>
+    <string name="payments">请选择充值方式:</string>
+    <string name="payment1">银行卡支付:</string>
+    <string name="payment1_">支持储蓄卡信用卡,无需网银</string>
+    <string name="payment2">支付宝支付:</string>
+    <string name="payment2_">推荐有支付宝帐号的用户使用</string>
+    <string name="payment3">银联支付:</string>
+    <string name="payment3_">储蓄卡支付需开通无卡支付功能</string>
+    <string name="payment4">微信支付:</string>
+    <string name="payment4_">推荐安装微信5.0以上版本的使用</string>
+    <string name="payment5">财付通支付:</string>
+    <string name="payment5_">支持银行卡和财付通账户支付</string>
+    <string name="sumbit_pay">确认支付</string>
+
+    <!-- time -->
+    <string name="year">年前</string>
+    <string name="month">月前</string>
+    <string name="day">天前</string>
+    <string name="hour">小时前</string>
+    <string name="min">分钟前</string>
+    <string name="sec">秒前</string>
+    <string name="justnow">刚刚</string>
+    <string name="yesterday">昨天</string>
+    <string name="the_day_before_yesterday">前天</string>
+    <string name="today">今天</string>
+    <string name="date_format">M月d日 HH:m</string>
+    <string name="year_format">yyyy年 M月d日 HH:mm</string>
+
+    <!-- listview -->
+    <string name="empty">空</string>
+    <string name="loading">载入中……</string>
+    <string name="refresh">刷新</string>
+    <string name="refreshing">刷新中……</string>
+
+    <!-- slidingmenu -->
+    <dimen name="slidingmenu_offset">170dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+
+</resources>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/index_title_bar" />
+
+    <include layout="@layout/index_show_userinfo_layout" />
+
+    <GridView
+        android:id="@+id/gvmodem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/index_nine_modem_bg"
+        android:horizontalSpacing="1dp"
+        android:listSelector="@color/whitesmoke"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp" >
+    </GridView>
+
+</LinearLayout>
